@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "SafeMoney",
+    "slug": "safemoney",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F5F5",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.safemoney.mobile",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "SafeMoney uses Face ID to confirm sensitive actions."
+      }
+    },
+    "android": {
+      "package": "app.safemoney.mobile",
+      "permissions": ["USE_BIOMETRIC", "USE_FINGERPRINT"]
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-local-authentication",
+        { "faceIDPermission": "SafeMoney uses Face ID to confirm sensitive actions." }
+      ]
+    ]
+  }
+}
